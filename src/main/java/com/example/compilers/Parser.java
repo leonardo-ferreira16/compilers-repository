@@ -9,7 +9,7 @@ public class Parser {
     }
 
     public void parse () {
-        // aqui ainda ira o código
+        expr();
     }
 
     private char peek () {
