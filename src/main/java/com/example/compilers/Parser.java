@@ -12,4 +12,10 @@ public class Parser {
         // aqui ainda ira o código
     }
 
+    private char peek () {
+        if (current < input.length)
+           return (char)input[current];
+        return '\0';
+    }
+
 }
