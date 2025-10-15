@@ -73,6 +73,13 @@ public class Parser {
         match(TokenType.SEMICOLON);
     }
 
+    void printStatement () {
+        match(TokenType.PRINT);
+        expr();
+        System.out.println("print");
+        match(TokenType.SEMICOLON);
+    }
+
 
 
 }
