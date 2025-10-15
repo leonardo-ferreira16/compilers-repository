@@ -63,6 +63,14 @@ public class Parser {
             throw new Error("syntax error");
     }
 
+    void letStatement () {
+        match(TokenType.LET);
+        match(TokenType.IDENT);
+        match(TokenType.EQ);
+        expr();
+        match(TokenType.SEMICOLON);
+    }
+
 
 
 }
