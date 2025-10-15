@@ -31,6 +31,20 @@ public class Parser {
         }
     }
 
-    
+    void oper () {
+        if (currentToken == '+') {
+            match('+');
+            digit();
+            System.out.println("add");
+            oper();
+        } else if (currentToken == '-') {
+            match('-');
+            digit();
+            System.out.println("sub");
+            oper();
+        }
+    }
+
+
 
 }
