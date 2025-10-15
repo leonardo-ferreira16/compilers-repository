@@ -90,6 +90,13 @@ public class Parser {
         }
     }
 
+    void statements () {
+        
+        while (currentToken.type != TokenType.EOF) {
+            statement();
+        }
+    }
+
 
 
 }
