@@ -1,11 +1,21 @@
 package com.example.compilers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.example.compilers.enumss.TokenType;
 
 public class Scanner {
 
     private byte[] input;
     private int current; 
+
+    private static final Map<String, TokenType> keywords;
+ 
+    static {
+        keywords = new HashMap<>();
+        keywords.put("let",    TokenType.LET);
+    }
 
 	public Scanner (byte[] input) {
         this.input = input;
