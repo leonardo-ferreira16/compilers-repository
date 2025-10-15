@@ -93,9 +93,11 @@ public class Scanner {
         int start = current;
         while (isAlphaNumeric(peek())) advance();
     
-        String id = new String(input, start, current-start);
-        return new Token(TokenType.IDENT, id);
-}
+        String id = new String(input, start, current-start)  ;
+        TokenType type = keywords.get(id);
+        if (type == null) type = TokenType.IDENT;
+        return new Token(type, id);
+    }
 
     private void skipWhitespace() {
         char ch = peek();
