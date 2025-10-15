@@ -52,6 +52,17 @@ public class Parser {
         oper();
     }
 
+    void term () {
+        if (currentToken.type == TokenType.NUMBER)
+            number();
+        else if (currentToken.type == TokenType.IDENT) {
+            System.out.println("push "+currentToken.lexeme);
+            match(TokenType.IDENT);
+        }
+        else
+            throw new Error("syntax error");
+    }
+
 
 
 }
