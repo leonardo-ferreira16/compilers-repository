@@ -1,7 +1,7 @@
 package com.example.compilers.enumss;
 
 public enum TokenType {
-    PLUS,MINUS,
+     PLUS,MINUS, EQ, SEMICOLON,
 
      // Literals.
      NUMBER,
