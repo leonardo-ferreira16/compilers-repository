@@ -1,5 +1,7 @@
 package com.example.compilers;
 
+import com.example.compilers.enumss.TokenType;
+
 public class Parser {
 
     private Scanner scan;
@@ -18,13 +20,13 @@ public class Parser {
         currentToken = scan.nextToken();
     }
 
-    private void match(char t) {
-        if (currentToken == t) {
+    private void match(TokenType t) {
+        if (currentToken.type == t) {
             nextToken();
-        }else {
+        } else {
             throw new Error("syntax error");
         }
-   }
+    }
 
     void digit () {
         if (Character.isDigit(currentToken)) {
