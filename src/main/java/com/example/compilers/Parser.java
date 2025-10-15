@@ -28,13 +28,9 @@ public class Parser {
         }
     }
 
-    void digit () {
-        if (Character.isDigit(currentToken)) {
-			System.out.println("push " + currentToken);
-            match(currentToken);
-        } else {
-            throw new Error("syntax error");
-        }
+    void number () {
+        System.out.println("push " + currentToken.lexeme);
+        match(TokenType.NUMBER);
     }
 
     void oper () {
