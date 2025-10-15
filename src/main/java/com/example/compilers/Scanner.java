@@ -1,5 +1,7 @@
 package com.example.compilers;
 
+import com.example.compilers.enumss.TokenType;
+
 public class Scanner {
 
     private byte[] input;
@@ -42,14 +44,14 @@ public class Scanner {
         throw new Error("lexical error");
     }
 
-    private String number() {
+    private Token number() {
         int start = current ;
         while (Character.isDigit(peek())) {
             advance();
         }
         
         String n = new String(input, start, current-start)  ;
-        return n;
-  }
+        return new Token(TokenType.NUMBER, n);
+    }
 
 }
