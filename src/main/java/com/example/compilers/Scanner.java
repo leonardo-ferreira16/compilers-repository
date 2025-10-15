@@ -15,4 +15,11 @@ public class Scanner {
        return '\0';
     }
 
+    private void advance()  {
+        char ch = peek();
+        if (ch != '\0') {
+            current++;
+        }
+    }
+
 }
