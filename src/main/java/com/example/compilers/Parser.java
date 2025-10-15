@@ -14,12 +14,23 @@ public class Parser {
         currentToken = scan.nextToken();
     }
 
-      private void match(char t) {
+    private void match(char t) {
         if (currentToken == t) {
             nextToken();
         }else {
             throw new Error("syntax error");
         }
    }
+
+    void digit () {
+        if (Character.isDigit(currentToken)) {
+			System.out.println("push " + currentToken);
+            match(currentToken);
+        } else {
+            throw new Error("syntax error");
+        }
+    }
+
+    
 
 }
