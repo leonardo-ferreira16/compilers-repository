@@ -1,11 +1,13 @@
 package com.example.compilers.enumss;
 
 public enum TokenType {
-     PLUS,MINUS, EQ, SEMICOLON,
+    PLUS,MINUS, EQ, SEMICOLON,
 
      // Literals.
-     NUMBER,
-     IDENT,
+    NUMBER,
+    IDENT,
 	
-		EOF
+    LET,
+
+	EOF
 }
