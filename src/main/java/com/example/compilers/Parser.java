@@ -34,17 +34,17 @@ public class Parser {
     }
 
     void oper () {
-        if (currentToken == '+') {
-            match('+');
-            digit();
+        if (currentToken.type == TokenType.PLUS) {
+            match(TokenType.PLUS);
+            number();
             System.out.println("add");
             oper();
-        } else if (currentToken == '-') {
-            match('-');
-            digit();
+        } else if (currentToken.type == TokenType.MINUS) {
+            match(TokenType.MINUS);
+            number();
             System.out.println("sub");
             oper();
-        }
+        } 
     }
 
     void expr() {
