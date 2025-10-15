@@ -36,12 +36,12 @@ public class Parser {
     void oper () {
         if (currentToken.type == TokenType.PLUS) {
             match(TokenType.PLUS);
-            number();
+            term();
             System.out.println("add");
             oper();
         } else if (currentToken.type == TokenType.MINUS) {
             match(TokenType.MINUS);
-            number();
+            term();
             System.out.println("sub");
             oper();
         } 
