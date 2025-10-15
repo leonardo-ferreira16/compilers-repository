@@ -10,6 +10,10 @@ public class Parser {
         currentToken = scan.nextToken();
     } 
 
+    public void parse () {
+        expr();
+    }
+
     private void nextToken () {
         currentToken = scan.nextToken();
     }
