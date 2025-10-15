@@ -73,6 +73,14 @@ public class Scanner {
         return new Token(TokenType.NUMBER, n);
     }
 
+    private Token identifier() {
+        int start = current;
+        while (isAlphaNumeric(peek())) advance();
+    
+        String id = new String(input, start, current-start);
+        return new Token(TokenType.IDENT, id);
+}
+
     private void skipWhitespace() {
         char ch = peek();
         while (ch == ' ' || ch == '\r' || ch == '\t' || ch == '\n') {
