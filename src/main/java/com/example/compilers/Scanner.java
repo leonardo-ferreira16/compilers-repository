@@ -22,4 +22,24 @@ public class Scanner {
         }
     }
 
+    public char nextToken () {
+        char ch = peek();
+
+        if (Character.isDigit(ch)) {
+						advance();
+            return ch;
+        }
+
+        switch (ch) {
+            case '+':
+            case '-':
+                advance();
+                return ch;
+            default:
+                break;
+        }
+
+        return '\0';
+    }
+
 }
