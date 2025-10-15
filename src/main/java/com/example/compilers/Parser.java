@@ -18,4 +18,12 @@ public class Parser {
         return '\0';
     }
 
+    private void match (char c) {
+        if (c == peek()) {
+            current++;
+        } else {
+            throw new Error("syntax error");
+        }
+  }
+
 }
