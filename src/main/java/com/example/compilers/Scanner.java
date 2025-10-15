@@ -38,6 +38,11 @@ public class Scanner {
         skipWhitespace();
     
         char ch = peek();
+
+        if (isAlpha(ch)) {
+            return identifier();
+        }
+
         if (ch == '0') {
             advance();
             return new Token (TokenType.NUMBER, Character.toString(ch));
