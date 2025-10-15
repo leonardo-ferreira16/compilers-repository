@@ -13,7 +13,7 @@ public class Parser {
     } 
 
     public void parse () {
-        letStatement();
+        statements();
     }
 
     private void nextToken () {
@@ -80,7 +80,7 @@ public class Parser {
         match(TokenType.SEMICOLON);
     }
 
-        void statement () {
+    void statement () {
         if (currentToken.type == TokenType.PRINT) {
             printStatement();
         } else if (currentToken.type == TokenType.LET) {
