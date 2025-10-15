@@ -48,7 +48,7 @@ public class Parser {
     }
 
     void expr() {
-        number();
+        term();
         oper();
     }
 
